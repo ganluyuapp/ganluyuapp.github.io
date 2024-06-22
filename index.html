@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>App 下载页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 设置 viewport -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    #top-image {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .download-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .download-buttons button {
+      padding: 15px 40px;
+      font-size: 18px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .download-buttons button:hover {
+      background-color: #45a049;
+    }
+
+    /* iPhone X 及更小尺寸 */
+    @media screen and (max-width: 375px) {
+      h1 {
+        font-size: 20px;
+      }
+
+      #top-image {
+        max-width: 300px;
+        margin-bottom: 15px;
+      }
+
+      .download-buttons button {
+        padding: 12px 25px;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+
+    /* 通用手机屏幕 */
+    @media screen and (min-width: 376px) and (max-width: 767px) {
+      h1 {
+        font-size: 24px;
+      }
+
+      #top-image {
+        max-width: 350px;
+        margin-bottom: 20px;
+      }
+
+      .download-buttons button {
+        padding: 15px 30px;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+    }
+
+    /* 平板和大屏手机 */
+    @media screen and (min-width: 768px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      #top-image {
+        max-width: 400px;
+        margin-bottom: 30px;
+      }
+
+      .download-buttons button {
+        padding: 15px 40px;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>App 下载页面</h1>
+
+  <!-- 顶部图片 -->
+  <img id="top-image" src="http://glycustall.hk.ufileos.com/D:/APP/Unnamed%20file-preface.jpg" alt="顶部图片">
+
+  <!-- 下载按钮 -->
+  <div class="download-buttons">
+    <!-- Android 下载按钮 -->
+    <button id="android-download" onclick="downloadAndroid()">Android 版本下载</button>
+
+    <!-- iOS 下载按钮 -->
+    <button id="ios-download" onclick="openTestFlight()">iOS 版本下载</button>
+  </div>
+
+  <script>
+    // 点击 Android 下载按钮时下载 APK
+    function downloadAndroid() {
+      window.location.href = "https://ganluyu.oss-cn-hangzhou.aliyuncs.com/uploads/tmp/app-release.apk";
+    }
+
+    // 点击 iOS 下载按钮时跳转至 TestFlight
+    function openTestFlight() {
+      window.location.href = "https://testflight.apple.com/join/1Y5aNKDZ";
+      // 替换链接为你的 TestFlight 链接
+    }
+  </script>
+</body>
+</html>
